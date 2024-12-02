@@ -1,0 +1,42 @@
+//instead function keyword, use parentheses and curly brackets
+    return (
+    <div>hello, my name is {props.name}<br />
+    value of children is {props.children}
+    </div>
+    //name이라는 props를 렌더링한다
+    //jsx 내부에서 {}로 감싸준다
+    );
+};
+
+MyComponent.defaultProps = {
+    name: 'basic name'
+};
+//props 값을 따로 지정하지 않았을 때 보여줄 기본값을 설정한다
+
+
+
+
+//함수 컴포넌트를 작성한다
+const MyComponent = ({name, favoriteNumber, children}) => {
+    //const {name, children} = props;
+    //비구조화 할당 destructuring assignment 문법을 사용하여 내부 값을 바로 추출
+
+    return(
+        <div>
+            hello, my name is {name}<br />
+            value of children is {children}<br />
+            my favorite number is {favoriteNumber}
+        </div>
+    );
+};
+
+MyComponent.defaultProps = {
+    name: 'basic name'
+};
+
+MyComponent.propTypes = {
+    name: PropTypes.string,
+    favoriteNumber: PropTypes.number.isRequired
+};
+
+export default MyComponent;

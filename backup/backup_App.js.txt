@@ -1,0 +1,74 @@
+ /*// 안에는 html 코드가 있다
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>*/
+
+
+
+
+    function App() {
+
+  // const name = 'svt';
+
+  // return (
+  //   // <Fragment>
+  //   //   {/* fragment 대신 공백으로 해도 작동이 된다 */}
+  //   //   <h1>hi {name}</h1>
+  //   //   <h2>is it working well?</h2>
+  //   // </Fragment>
+
+  //   <div>
+  //     {name === 'svt' ? (
+  //       //수식이 참이면
+  //       <h1>it's svt</h1>
+  //     ) : (
+  //       //수식이 거짓이면
+  //       <h1>it's not svt</h1>
+  //     )}
+  //   </div>
+  // );
+
+
+
+
+  // const name = 'svt';
+    // return <div>{name ==='svt' ? <h1>its rererererer</h1> : null}</div>
+    // return <div>{name === 'svt' && <h1>it's svt</h1>}</div>;
+
+    
+    //이름 값이 정해지지 않았을 때 보여 주고 싶은 문구가 있다면 
+    // const name = undefined;
+    // return <h1>{name || 'svt'}</h1>;
+
+    const name = 'worldwide svt forever';
+
+    // return(
+    // <div
+    // const style = {{
+    //   backgroundColor: 'black', //write in camel style
+    //   color: 'aqua',
+    //   fontSize: '48px',
+    //   fontWeight: 'bold',
+    //   padding: 16 //if you omit the unit, px would be default
+    // }}
+    // >
+    //   {name}
+    // </div>
+
+// );
+
+    return <div className='react'>{name}</div>;
+}
