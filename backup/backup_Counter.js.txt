@@ -1,0 +1,13 @@
+//즉 이벤트를 설정한다
+                    // this.setState({ number: number + 1 });
+                    this.setState(prevState => { //기존 상태를 나타낸다
+                        return{
+                            number: prevState.number + 1
+                        };
+                    });
+                    //this.setState를 사용해서 새로운 값을 넣는다
+                    // this.gura();
+
+
+
+

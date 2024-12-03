@@ -1,0 +1,28 @@
+state = {
+        username:'',
+        message: '' //state의 초기값을 설정
+    }
+
+    handleChange = (e) => {
+        //e느 이벤트와 관련된 정보를 담고 있는 객체
+        this.setState({
+            [e.target.name]: e.target.value
+            //다양한 인풋을 공통으로 사용한다
+            //입력 요소의 현재 값ㅇ르 가져온다
+        });
+    }
+
+    handleClick = () => {
+        alert(this.state.username+': '+this.state.message);
+        this.setState({
+            username:'',
+            message:''
+        }); //state를 초기화한다
+    } //단순한 동작이나 상태 변경만 하므로 e를 사용하지 않는다
+
+    handleKeyPress = (e) =>{
+        if(e.key === 'Enter'){
+            this.handleClick();
+            //엔터키를 누르면 작동한다
+        }
+    }
