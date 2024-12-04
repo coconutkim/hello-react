@@ -1,45 +1,25 @@
-import { Component } from "react";
+import { useState } from "react";
 
-class Counter extends Component{
+const Counter = () => {
+    const [value, setValue] = useState(0);
+    //기본값을 0으로 설정한다
+    //setmethod는 속성 메소드
 
-    // constructor(props){
-        // super(props);
-        //state의 초깃값을 설정
-        state = {
-            number: 0,
-            fixedNumber: 0
-        };
-    // }
-    
-    //num = 0;
-    //rise = () => {console.log(this.num); this.num++;};
-    //gura = () => this.state.number++;
-    render(){
-        const {number, fixedNumber} =this.state; //state를 조회할 때는 this.state로 조회
-        return (
-            <div>
-                <h1>{number}</h1>
-                <h2>non-changed number: {fixedNumber}</h2>
-                <button
-                onClick={() => { //버튼이 클릭되었을 대 호출할 함수를 지정한다
-                    this.setState(
-                        {
-                            number: number + 1
-                        },
-                        () => {
-                            console.log('setstate was just called');
-                            console.log(this.state);
-                        }
-                    );
-                }}
-                >
+    //함수 컴포넌트는 리턴이 있다
+    return(
+        <div>
+            <p>
+                current value of counter is <b>{value}</b>.
+                {/* 저장된 값을 state가 관리한다 */}
+            </p>
+            <button onClick={() => setValue(value + 1)}>
                 +1
-                </button>
-                {/* <h1>{this.num}</h1> */}
-                {/* <button onClick={this.rise}>증가</button> */}
-            </div>
-        );
-    }
-}
+            </button>
+            <button onClick={() => setValue(value - 1)}>
+                -1
+            </button>
+        </div>
+    );
+};
 
 export default Counter;
